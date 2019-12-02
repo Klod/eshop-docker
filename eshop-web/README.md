@@ -29,7 +29,7 @@ Push the code to GitHub. This will start workflows to create your Azure resource
 git push -u origin master
 ```
 
-[You can check on the workflows here](https://github.com/kirill/eshop-docker/actions). It make take a minute or so before the actions start. The workflows use secrets from your repo to connect to Azure. Then they:
+[You can check on the workflows here](https://github.com/klod/eshop-docker/actions). It make take a minute or so before the actions start. The workflows use secrets from your repo to connect to Azure. Then they:
 
 - create an AKS cluster
 - deploy [Helm](https://helm.sh) on the cluster
@@ -85,7 +85,7 @@ Your app is running now in Azure and you can browse to the Kubernetes dashboard 
 Launch an [Azure Cloud Shell](https://shell.azure.com) session and connect to your AKS cluster:
 
 ```
-az aks get-credentials --resource-group kirill-eshop-docker --name kirill-aks
+az aks get-credentials --resource-group klod-eshop-docker --name kirill-aks
 ```
 
 Then you can use the `kubectl` command line to work with Kubernetes, or launch the web dashboard if you prefer to use the UI.
@@ -101,7 +101,7 @@ kubectl get service eshopwebmvc-published
 Or you can run the Kubernetes dashboard:
 
 ```
-az aks browse --resource-group kirill-eshop-docker --name kirill-aks
+az aks browse --resource-group klod-eshop-docker --name kirill-aks
 ```
 
 > A new browser tab opens here showing the Kubernetes dashboard. Sometimes the tab opens before the dashboard is ready and you'll see a connection error - just refresh that tab and it will be fine.
